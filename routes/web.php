@@ -19,8 +19,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/barbeiro', [BarbeiroController::class, 'index']);
-
-Route::get('/agendamento', [ClienteController::class, 'agendamento']);
 
 require __DIR__.'/auth.php';

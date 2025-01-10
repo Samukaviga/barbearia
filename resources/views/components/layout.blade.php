@@ -161,14 +161,19 @@
                             @endif
 
                             @if(Auth::user()->tipo_usuario == 0)
-                                <li> 
-                                    <a href="/barbeiro"><i class="feather-grid"></i> <span>Inicio</span></a>
-                                </li>
+                              
+                                <li class="submenu">
+                                    <a href="#"><i class="feather-grid"></i> <span>Barbeiro</span> <span class="menu-arrow"></span></a>
+                                    <ul>
+                                        <li><a href="{{ route('barbeiro.index') }}">Index</a></li> 	 	 
+                                        <li><a href="{{ route('barbeiro.cadastrar.horario') }}">Cadastrar horarios</a></li> 	 	 
+                                    </ul> 
+                                </li> 
 
                                 <li class="submenu">
                                     <a href="#"><i class="feather-grid"></i> <span>Cliente</span> <span class="menu-arrow"></span></a>
                                     <ul>
-                                        <li><a href="/agendamento">#</a></li> 	 	 
+                                        <li><a href="{{route('cliente.agendamento')}}">Agendamento</a></li> 	 	 
                                     </ul> 
                                 </li> 
                             @endif
